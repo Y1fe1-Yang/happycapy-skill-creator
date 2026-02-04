@@ -1,11 +1,34 @@
 # HappyCapy Skill Creator
 
+[![Download Latest Release](https://img.shields.io/github/v/release/Y1fe1-Yang/happycapy-skill-creator?label=Download&style=for-the-badge)](https://github.com/Y1fe1-Yang/happycapy-skill-creator/releases/latest)
+
 [English](#english) | [中文](#中文)
 
 ---
 
 <a name="english"></a>
 ## English
+
+## 📥 Quick Install
+
+### Option 1: Download Pre-packaged Skill (Recommended)
+
+1. Download `happycapy-skill-creator-v1.2.0.skill` from [Releases](https://github.com/Y1fe1-Yang/happycapy-skill-creator/releases/latest)
+2. In HappyCapy environment:
+   ```bash
+   /install happycapy-skill-creator-v1.2.0.skill
+   ```
+
+### Option 2: Clone and Use Directly
+
+```bash
+git clone https://github.com/Y1fe1-Yang/happycapy-skill-creator.git
+cd happycapy-skill-creator
+git checkout optimized-v1.2
+python scripts/create_skill.py "Your requirement" --name skill-name
+```
+
+---
 
 ### 🎯 What is This?
 
@@ -72,19 +95,6 @@ python scripts/create_skill.py "I need to compress PDF files" --name pdf-compres
 4. Test and iterate 🔄
 ```
 
-### 📦 Installation
-
-```bash
-# Clone repository
-git clone https://github.com/Y1fe1-Yang/happycapy-skill-creator.git
-cd happycapy-skill-creator
-
-# Install dependencies (already available in HappyCapy)
-pip install -r requirements.txt
-
-# Use it
-python scripts/create_skill.py "Your requirement here" --name skill-name
-```
 
 ### 🔧 Requirements
 
@@ -110,6 +120,27 @@ This project references and adapts content from [anthropics/skills](https://gith
 
 <a name="中文"></a>
 ## 中文
+
+## 📥 快速安装
+
+### 方式1: 下载预打包Skill（推荐）
+
+1. 从 [Releases](https://github.com/Y1fe1-Yang/happycapy-skill-creator/releases/latest) 下载 `happycapy-skill-creator-v1.2.0.skill`
+2. 在HappyCapy环境中:
+   ```bash
+   /install happycapy-skill-creator-v1.2.0.skill
+   ```
+
+### 方式2: 克隆仓库直接使用
+
+```bash
+git clone https://github.com/Y1fe1-Yang/happycapy-skill-creator.git
+cd happycapy-skill-creator
+git checkout optimized-v1.2
+python scripts/create_skill.py "你的需求" --name 技能名称
+```
+
+---
 
 ### 🎯 这是什么？
 
@@ -176,19 +207,6 @@ python scripts/create_skill.py "我需要压缩PDF文件" --name pdf-compressor
 4. 测试和迭代 🔄
 ```
 
-### 📦 安装
-
-```bash
-# 克隆仓库
-git clone https://github.com/Y1fe1-Yang/happycapy-skill-creator.git
-cd happycapy-skill-creator
-
-# 安装依赖（HappyCapy中已经可用）
-pip install -r requirements.txt
-
-# 使用
-python scripts/create_skill.py "你的需求" --name 技能名称
-```
 
 ### 🔧 要求
 

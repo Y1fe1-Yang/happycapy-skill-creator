@@ -1,0 +1,43 @@
+name: PR Check
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  check-pr:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+
+    - name: Check PR title
+      run: |
+        PR_TITLE="${{ github.event.pull_request.title }}"
+        echo "PR Title: $PR_TITLE"
+
+        # Check if title follows conventional commits
+        if ! echo "$PR_TITLE" | grep -qE '^(feat|fix|docs|style|refactor|test|chore)(\(.+\))?: .+'; then
+          echo "❌ PR title does not follow conventional commits format"
+          echo "Expected format: type(scope): description"
+          echo "Types: feat, fix, docs, style, refactor, test, chore"
+          exit 1
+        fi
+
+        echo "✅ PR title follows conventional commits"
+
+    - name: Check for CHANGELOG update
+      run: |
+        if git diff --name-only origin/main...HEAD | grep -q "CHANGELOG.md"; then
+          echo "✅ CHANGELOG.md updated"
+        else
+          echo "⚠️ CHANGELOG.md not updated (recommended for non-trivial changes)"
+        fi
+
+    - name: Check file changes
+      run: |
+        echo "📁 Files changed:"
+        git diff --name-status origin/main...HEAD

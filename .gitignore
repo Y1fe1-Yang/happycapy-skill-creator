@@ -3,7 +3,10 @@ __pycache__/
 *.py[cod]
 *$py.class
 *.so
+*.pyc
 .Python
+
+# Distribution / packaging
 build/
 develop-eggs/
 dist/
@@ -16,6 +19,8 @@ parts/
 sdist/
 var/
 wheels/
+pip-wheel-metadata/
+share/python-wheels/
 *.egg-info/
 .installed.cfg
 *.egg
@@ -25,6 +30,7 @@ MANIFEST
 venv/
 ENV/
 env/
+.venv
 
 # IDE
 .vscode/
@@ -32,19 +38,53 @@ env/
 *.swp
 *.swo
 *~
+.project
+.pydevproject
+.settings/
 
 # OS
 .DS_Store
 Thumbs.db
+*.bak
 
 # Workspace (generated files)
 workspace/
-outputs/*.skill
+outputs/
+tmp/
+*.tmp
 
 # Test outputs
 .pytest_cache/
 .coverage
+.coverage.*
 htmlcov/
+.tox/
+.nox/
+.hypothesis/
+coverage.xml
+*.cover
+.cache
 
 # Logs
 *.log
+logs/
+
+# MyPy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pre-commit
+.pre-commit-config.yaml.bak
+
+# Documentation builds
+docs/_build/
+site/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Environment variables
+.env
+.env.local
+.envrc

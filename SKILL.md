@@ -1,6 +1,6 @@
 ---
 name: happycapy-skill-creator
-description: Create HappyCapy skills by finding and adapting similar skills from anthropics/skills repository. Use when the user wants to: (1) Create a new skill for a specific task or domain, (2) Adapt an existing skill with new features, (3) Build a skill that needs to work within HappyCapy constraints (Python 3.11, Node.js 24, no Docker). Triggers include requests like "create a skill for X", "build a skill that does Y", "I need a skill to handle Z", or when discussing skill development for HappyCapy environment.
+description: "Automate HappyCapy skill creation by finding and adapting existing skills from anthropics/skills repository. Handles environment constraints (Python 3.11, Node.js 24, no Docker). Use when user wants to create or adapt skills for specific tasks."
 ---
 
 # HappyCapy Skill Creator
